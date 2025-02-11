@@ -1,0 +1,92 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "pizza_generator"
+    },
+    {
+      "path": "case"
+    },
+    {
+      "path": "webui"
+    },
+    {
+      "path": "rpi_image"
+    }
+  ],
+  "settings": {
+    // For webui/
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      }
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      }
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      }
+    },
+    "[astro]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      }
+    },
+    "[html]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "tailwindCSS.experimental.classRegex": [
+      ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ],
+    // For case/
+    "scad-lsp.fmtStyle": "chromium",
+    "scad-lsp.launchPath": "/usr/bin/openscad-nightly",
+    // For case/ and pizza_generator/
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.codeActionsOnSave": {
+        "source.fixAll.ruff": "explicit",
+        "source.organizeImports.ruff": "explicit"
+      }
+    },
+    "flake8.enabled": false,
+    // Misc
+    "[jsonc]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.settings.useSplitJSON": true
+  },
+  "extensions": {
+    "recommendations": [
+      // For webui/
+      "astro-build.astro-vscode",
+      "editorconfig.editorconfig",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss",
+      // For case/, pizza_generator/
+      "charliermarsh.ruff"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+---
+import { App } from '@/components/App'
+import { RELATIVE_BASE_URL } from '@/lib/astro'
+import { getGitInfo } from '@/lib/gitInfo'
+import '@/styles/global.css'
+
+const gitInfo = await getGitInfo()
+const versionString = `${gitInfo?.tag || gitInfo?.shortHash || 'unknown'}`
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href={`${RELATIVE_BASE_URL}/favicon.ico`}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pizza Clock</title>
+    <style>
+      html,
+      body {
+        font-family: system-ui;
+        margin: 0;
+      }
+      body {
+      }
+    </style>
+  </head>
+  <body>
+    <main class="h-screen w-screen flex">
+      <App client:only="react" versionString={versionString} />
+    </main>
+  </body>
+</html>

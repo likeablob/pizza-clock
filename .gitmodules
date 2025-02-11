@@ -1,0 +1,3 @@
+[submodule "case/scad-utils"]
+	path = case/scad-utils
+	url = https://github.com/likeablob/scad-utils
