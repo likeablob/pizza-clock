@@ -126,7 +126,7 @@ export const PizzaClock = ({ settings }: Props) => {
           />
         ))}
         <div
-          className="absolute z-10 flex size-full justify-center"
+          className="absolute left-0 top-0 z-10 flex size-full justify-center"
           onClick={onClickImage}
         >
           <svg viewBox="0 0 200 200" className="grow-0 select-none">
