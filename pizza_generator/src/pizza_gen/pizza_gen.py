@@ -117,7 +117,7 @@ class PizzaGen:
             raise Exception(
                 (
                     "Failed to find a proper depth model,"
-                    "which contains 'sd15_seg' in its name."
+                    "which contains 'sd15_depth' in its name."
                 )
             )
 
@@ -194,11 +194,11 @@ class PizzaGen:
                 prompt=prompt,
                 negative_prompt=neg_prompt,
                 seed=seed,
-                cfg_scale=10,
+                cfg_scale=2.5,
                 steps=20,
                 width=self.width,
                 height=self.width,
-                sampler_name="Euler a",
+                sampler_name="DPM++ 3M SDE",
                 controlnet_units=cn_units,
                 use_async=False,
             )
