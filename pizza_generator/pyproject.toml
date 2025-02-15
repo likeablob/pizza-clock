@@ -8,10 +8,11 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "ollama>=0.4.7",
+    "litellm>=1.61.1",
     "pillow>=11.1.0",
     "pydantic>=2.10.6",
     "rich>=13.9.4",
+    "tenacity>=9.0.0",
     "typer>=0.15.1",
     "webuiapi>=0.9.17",
 ]

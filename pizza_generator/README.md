@@ -42,7 +42,12 @@ $ seq 1 12 | xargs -t -I% uv run pizza_gen pizza -s $SD_SERVER -o dist/ --num-pi
 $ uv run pizza_gen circular -s $SD_SERVER -o dist/ -p "A photo of a coffee cup."
 
 # Generate prompts with ollama.
-$ uv run circular_prompt_gen -s http://your-ollama-server:11434 -o output.json
+$ export OLLAMA_API_BASE=http://your-ollama-server:11434
+$ uv run circular_prompt_gen -m ollama_chat/gemma2:9b -o output.json
+
+# Generate with gemini
+$  echo GEMINI_API_KEY=... > .env
+$ uv run circular_prompt_gen -m gemini/gemini-2.0-flash-exp -o output.json
 ...
  thing='porcelain bowl' prompt="A photorealistic, close-up photograph of a pristine white porcelain bowl resting on a wooden table."
 
