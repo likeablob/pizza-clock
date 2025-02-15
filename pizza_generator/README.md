@@ -1,6 +1,6 @@
 # pizza-clock/pizza-generator
 
-<img src="./ref_images/pizza_12p_4p.webp" height="300">
+<img src="./images//pizza.webp" height="300">
 <img src="./images/donut.webp" height="300">
 
 ## Prerequisites
